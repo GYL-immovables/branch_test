@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-
-왜 안 되지
+pull 테스트
 </body>
 </html>
