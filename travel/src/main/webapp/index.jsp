@@ -23,6 +23,7 @@
     <link rel="icon" href="./img/logo.png" sizes="32x32">
     <link rel="icon" href="./img/logo.png" sizes="16x16">
 </head>
+
 <body class="bodycss">
     <header class="admin_title">
         <p><img src="./img/logo.png" class="logo_sm"> ADMINISTRATOR</p>
@@ -33,5 +34,8 @@
            <%@include file="./index_footer.jsp" %>
         </div>
     </footer>
+
+<body>
+
 </body>
 </html>
