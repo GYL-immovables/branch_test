@@ -9,5 +9,17 @@
 	  <servlet-name>index</servlet-name>
 	  <url-pattern>/index.do</url-pattern>
   </servlet-mapping>
+  
+	<servlet>
+	<servlet-name>admin_siteinfo</servlet-name>
+	<servlet-class>travel.admin_siteinfo</servlet-class>
+  	</servlet>
+	<servlet-mapping>
+	<servlet-name>admin_siteinfo</servlet-name>
+	<url-pattern>/admin_siteinfo.do</url-pattern>
+  	</servlet-mapping>
+  
+ 
+	
 	
 </web-app>

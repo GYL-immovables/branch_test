@@ -1,26 +1,26 @@
+<%@page import="travel.dto_setting"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
 <%
-    // request에서 copyright 데이터를 가져옴
-    ArrayList<String> cpdata = (ArrayList<String>) request.getAttribute("cpdata");
+    ArrayList<dto_setting> copyright = (ArrayList<dto_setting>) request.getAttribute("copyright");
 
-    // 데이터가 존재하는 경우에만 출력
-    if (cpdata != null && cpdata.size() == 10) {
+    if (copyright != null && !copyright.equals(null)) {
+        dto_setting data = copyright.get(0); // 첫 번째 객체를 가져옴
 %>
 <footer class="main_copyright">
     <div>
-        Copyright ⓒ 2024 <%= cpdata.get(0) %> |
-        대표 : <%= cpdata.get(1) %> |
-        사업자등록번호 : <%= cpdata.get(2) %> |
-        번호 : <%= cpdata.get(3) %> |
-        통신판매업신고번호 : <%= cpdata.get(4) %> |
-        통신사업자번호 : <%= cpdata.get(5) %> |
-        우편번호 : <%= cpdata.get(6) %> |
-        주소 : <%= cpdata.get(7) %> |
-        정보관리책임자 : <%= cpdata.get(8) %> |
-        책임자이메일 : <%= cpdata.get(9) %>
+        대표 : <%= data.getCeo_nm() %> |
+        사업자등록번호 : <%= data.getBusiness_no() %> |
+        번호 : <%= data.getTel() %> |
+        통신판매업신고번호 : <%= data.getCom_no() %> |
+        통신사업자번호 : <%= data.getAdd_no() %> |
+        우편번호 : <%= data.getAddr_no() %> |
+        주소 : <%= data.getCom_addr() %> |
+        정보관리책임자 : <%= data.getInfo_nm() %> |
+        책임자이메일 : <%= data.getInfo_email() %>
+        Copyright ⓒ 2024 <%= data.getComp_nm() %> |
         All rights reserved.
     </div>
 </footer>
